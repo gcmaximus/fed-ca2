@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <link href="style/web_layout.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <!-- This is a navigation bar -->
+        <nav class="navbar navbar-expand-xl nav justify-content-center navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img id="brand" src="./images/pepe.jpg"></a>
+            <!-- Brand image from https://nymag.com/intelligencer/2017/09/pepes-creator-is-on-a-legal-crusade-to-take-back-the-frog.html -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link p-2 active" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link p-2" href="exp-before-sp.html">Experience before SP</a>
+                    <a class="nav-link p-2" href="exp-in-sp.html">Experience in SP</a>
+                    <a class="nav-link p-2" href="course.html">About my Course</a>
+                    <a class="nav-link p-2" href="feedback.html">Feedback</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <!-- Home Page Hero Banner -->
+        <article class="hero-banner home mx-auto">
+            <h1>Welcome to Jerald Yeo's Website!</h1>
+        </article>
+        <section class="container">
+            <h1>About me</h1>
+            <div class="row">
+                <div class="m-auto col-xl-7 col-lg-6">
+                    <p>I express compassion towards those who need help and I try to help them
+                        to the best of my ability, even if it sacrifices some of my own resources,
+                        such as time. I try my best to cooperate with others as well if we are
+                        working as a team. I will listen to the ideas and opinions of every team member
+                        without judgement and I will respect the team's final decision. I will avoid fighting
+                        with others at all costs so that no one is hurt.
+                    </p>
+                </div>
+                <!-- Auto changing slides -->
+                <div class="m-auto col-xl-5 col-lg-6">
+                    <div class="text-center p-2 gameSlides mx-auto">
+                        <h4>Some online games that I enjoy playing</h4>
+                        <img src="images/game1.jpg" alt="" id="game">
+                        <figcaption id="gameName" class="pt-2"><strong>Counter Strike: Global Offensive</strong></figcaption>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>I enjoy listening to music to relieve my stress while doing work. I listen to
+                        many genres of music, with some of my favourites being pop music and Electronic Dance Music
+                        (EDM).
+                        I also love playing video games with my friends as it can entertain us for hours on end.
+                        As we are playing, we also catch up and crack jokes with one another, making our gaming sessions
+                        extremely hilarious and entertaining.
+                    </p>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="my-auto col-xl-3 col-lg-4">
+                    <!-- Image of me in SP -->
+                    <figure class="poly mx-auto">
+                        <img class="p-2" src="images/J3-poly.jpeg" alt="Jerald in Polytechnic">
+                        <figcaption>Fig 1.1: Me in SP</figcaption>
+                    </figure>
+                </div>
+                <div class="m-auto col-xl-9 col-lg-8 col-sm-12">
+                    <p>
+                        As an introvert, I prefer spending my time alone to spending my time with others.
+                        Despite this, I do still enjoy hanging out and chatting with people I already know, although
+                        my social battery can be drained fast at times. My emotions tend to control me, leading to me
+                        making
+                        decisions based
+                        on what mood I am feeling at that point in time. Leaning towards the creative side of thinking
+                        rather
+                        than the "facts and figures" side,
+                        I tend to daydream a lot, coming up with unrealistic and ridiculous scenarios in my mind.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center bg-secondary">
+        <div class="container">
+            &copy; Copyright &#8212; Jerald Yeo 2021
+            <br><br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="https://www.instagram.com/gc_lumindz/" target="_blank"><img class="float-right" id="sm"
+                            src="./images/ig.jpg"></a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="https://www.facebook.com/jerald.yeo.9/" target="_blank"><img class="float-left" id="sm"
+                            src="./images/fb.jpg"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="javascript/games.js"></script>
+</body>
+
+</html>

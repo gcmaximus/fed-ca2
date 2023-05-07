@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <link href="style/web_layout.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Feedback</title>
+</head>
+
+<body>
+    <header>
+        <!-- This is a navigation bar -->
+        <nav class="navbar navbar-expand-lg nav justify-content-center navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img id="brand" src="./images/pepe.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link p-2" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link p-2" href="exp-before-sp.html">Experience before SP</a>
+                    <a class="nav-link p-2" href="exp-in-sp.html">Experience in SP</a>
+                    <a class="nav-link p-2" href="course.html">About my Course</a>
+                    <a class="nav-link p-2 active" href="feedback.html">Feedback</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article class="hero-banner form-bg mx-auto">
+            <h1>Feedback</h1>
+        </article>
+        <section class="container">
+        <form method="post" class="bg-dark">
+            <fieldset class="p-2">
+                <!-- Q1 is a range slider type -->
+                <label for="q1">Q1. On a scale of 1 &#8212; 5, how interesting is this website?
+                    <br>
+                    (1 for very uninteresting, 5 for very interesting)
+                </label>
+                <br>
+                <br>
+                <div class="form-control-range range mx-auto">
+                    1
+                    <input type="range" min="1" max="5" step="1" value="3" name="q1">
+                    5
+                </div>
+                <br>
+
+                <!-- Q2 is a select type -->
+                <label for="q2">Q2. Which section of the website was the most appealing?</label>
+                <br><br>
+                <select name="q2">
+                    <option value="" disabled selected>Please choose 1 option</option>
+                    <option value="section1">About Me</option>
+                    <option value="section2">My Experience Before SP</option>
+                    <option value="section3">My Experience in SP and School of Computing</option>
+                    <option value="section4">My Course in SP</option>
+                </select>
+                <br><br>
+
+                <!-- Q3 is a radio type -->
+                <label for="q3">Q3. Please select 1 section of the website which needs to be improved the most</label>
+                <br>
+                <input type="radio" id="section1" name="q3" value="About Me">
+                <label for="section1">About Me</label>
+                <br>
+                <input type="radio" id="section2" name="q3" value="My Experience Before SP">
+                <label for="section2">My Experience Before SP</label>
+                <br>
+                <input type="radio" id="section3" name="q3" value="My Experience in SP and School of Computing">
+                <label for="section3">My Experience in SP and School of Computing</label>
+                <br>
+                <input type="radio" id="section4" name="q3" value="My Course in SP">
+                <label for="section4">My Course in SP</label>
+                <br>
+                <br>
+
+                <!-- Q4 is a checkbox type -->
+                <label for="q4">Q4. Please tick the reason(s) for what can be improved in the section chosen
+                    above</label>
+                <br>
+                <input type="checkbox" id="section1" name="q4a">
+                <label for="q4a">Too little content</label>
+                <br>
+                <input type="checkbox" id="section2" name="q4b">
+                <label for="q4b">Not aesthetically appealing</label>
+                <br>
+                <input type="checkbox" id="section3" name="q4c">
+                <label for="q4c">Other reasons</label>
+                <br>
+                <br>
+
+                <!-- Q5 is a textarea type -->
+
+                <label for="q5">Q5. What improvements can be made to the website in general? (Appearance, contents,
+                    etc.)</label>
+                <br>
+                <textarea class="rounded form-control form-control-lg" name="q5" id="q5" rows="5"
+                    placeholder="Please enter suggestions here"></textarea>
+                <br>
+
+                <!-- Q6 is a email type -->
+                <label for="q6">If you would like to receive updates to the website, please enter your email and
+                    telephone
+                    number.</label>
+                <div class="row">
+                    <div class="col-7">
+                        <label for="q6">Email:</label>
+                        <input class="rounded form-control form-control-md" type="email" id="email" name="email"
+                            placeholder="email">
+                    </div>
+
+                    <!-- Q7 is a tel type -->
+                    <div class="col-5">
+                        <label for="q7">Telephone:</label>
+                        <input class="rounded form-control form-control-md" type="tel" id="tel" name="tel"
+                            placeholder="telephone number">
+                    </div>
+                </div>
+                <br>
+                <input type="submit" id="submit" value="Submit Form" onclick="thank()">
+                <br>
+                <br>
+            </fieldset>
+        </form>
+    </section>
+    </main>
+    <script src="javascript/feedback.js"></script>
+    <footer class="text-center bg-secondary">
+        <div class="container">
+            &copy; Copyright &#8212; Jerald Yeo 2021
+            <br><br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="https://www.instagram.com/gc_lumindz/" target="_blank"><img class="float-right" id="sm"
+                            src="./images/ig.jpg"></a>
+                </div>
+                <div class="col-sm-6">
+                    <a href="https://www.facebook.com/jerald.yeo.9/" target="_blank"><img class="float-left" id="sm"
+                            src="./images/fb.jpg"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>
